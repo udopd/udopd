@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SUPER CUBE — независимая студия Павла Удовкина. Маленькие игры, эксперименты и идеи.">
+  <title>SUPER CUBE</title>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+  <div class="app-root" id="app">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#top" aria-label="SUPER CUBE">SUPER CUBE</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav-link" href="#about" data-i18n="navAbout">О студии</a>
+          <a class="nav-link" href="#projects" data-i18n="navProjects">Проекты</a>
+          <a class="nav-link" href="#devlogs" data-i18n="navDevlogs">Заметки</a>
+          <a class="nav-link" href="#contact" data-i18n="navContact">Контакты</a>
+          <div class="controls" aria-label="Настройки">
+            <button class="control language-toggle" type="button" id="languageToggle" aria-label="Переключить язык">RU</button>
+            <button class="control" type="button" id="themeToggle" aria-label="Переключить тему">◐</button>
+          </div>
+        </nav>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+        <a class="mobile-menu-link" href="#about" data-i18n="navAbout">О студии</a>
+        <a class="mobile-menu-link" href="#projects" data-i18n="navProjects">Проекты</a>
+        <a class="mobile-menu-link" href="#devlogs" data-i18n="navDevlogs">Заметки</a>
+        <a class="mobile-menu-link" href="#contact" data-i18n="navContact">Контакты</a>
+        <div class="mobile-menu-settings">
+          <button class="mobile-menu-control" type="button" id="mobileLanguageToggle">RU</button>
+          <button class="mobile-menu-control" type="button" id="mobileThemeToggle">◐</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1 id="heroTitle" aria-label="SUPER CUBE">SUPER CUBE</h1>
+            <div class="hero-side">
+              <p class="hero-quote" data-i18n="quote">Я просто делаю маленькие игры</p>
+              <p class="hero-person" data-i18n="heroPerson">Павел Удовкин · Solo Developer</p>
+              <div class="rubik-controls">
+                <button class="rubik-solve" id="rubikSolve" type="button" data-i18n="solveCube">Собрать кубик</button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-cube">
+            <div class="rubik-frame" id="rubikFrame" aria-label="Интерактивный кубик Рубика">
+              <div class="rubik-stage" id="rubikStage"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="aboutTitle">О студии</h2>
+            <p class="section-kicker">01 / 04</p>
+          </div>
+          <div class="about-grid">
+            <p class="about-lead" data-i18n="aboutLead"><span class="about-brand">SUPER CUBE</span> — маленькая студия одного человека, где идеи превращаются в небольшие игры</p>
+            <p class="about-copy" data-i18n="aboutCopy">Без большой команды и лишнего шума. Я проектирую, программирую, собираю и выпускаю свои игры сам — от первой механики до последнего пикселя</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="projectsTitle">Проекты</h2>
+            <p class="section-kicker">02 / 04</p>
+          </div>
+          <div class="projects">
+
+            <article class="project">
+              <div class="project-info">
+                <div class="project-shots" aria-label="Скриншоты игры" tabindex="0">
+                  <div class="shot-cube">
+                    <div class="shot">
+                      <img src="src/gifs/bomberman.gif">
+                    </div>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <h3 data-i18n="projectExperiments"></h3>
+                  <p data-i18n="projectExperimentsText"></p>
+                </div>
+              </div>     
+                <div class="project-meta">
+                  <span class="language-scramble" data-i18n="projectStatus2"></span>
+                  <a class="project-play language-scramble" href="https://github.com/SPSUITD/2-md-15-udopd" data-i18n="playButton">Играть</a>
+                </div>       
+            </article>
+
+            <article class="project">
+              <div class="project-info">
+                <div class="project-shots" aria-label="Скриншоты игры" tabindex="0">
+                  <div class="shot-cube">
+                    <div class="shot">
+                      <img src="src/gifs/alien.gif">
+                    </div>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <h3 data-i18n="projectCurrent"></h3>
+                  <p data-i18n="projectCurrentText"></p>
+                </div>
+              </div>     
+                <div class="project-meta">
+                  <span class="language-scramble" data-i18n="projectStatus">в разработке</span>
+                  <a class="project-play language-scramble" href="https://udopd.itch.io/signal-blast-alien-shooter" data-i18n="playButton">Играть</a>
+                </div>       
+            </article>
+            
+            <article class="project is-hidden">
+              <div class="project-info">
+                <div class="project-shots" aria-label="Скриншоты игры" tabindex="0">
+                  <div class="shot-cube">
+                    <div class="shot">
+                      <img src="src/gifs/cube.gif">
+                    </div>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <h3 data-i18n="projectThird"></h3>
+                  <p data-i18n="projectThirdText"></p>
+                </div>
+              </div>     
+                <div class="project-meta">
+                  <span class="language-scramble" data-i18n="projectStatus3">в разработке</span>
+                  <a class="project-play language-scramble is-hidden"></a>
+                </div>       
+            </article>
+
+          </div>
+          <div class="projects-more">
+            <a class="language-scramble" href="#" id="projectsToggle" data-i18n="moreProjects">Посмотреть больше</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="devlogs">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="devlogsTitle">Заметки</h2>
+            <p class="section-kicker">03 / 04</p>
+          </div>
+          <div class="devlogs">
+            <div class="devlog">
+              <span class="devlog-date">06.10.26</span>
+              <div>
+                <h3 class="devlog-title" data-i18n="devlogOneTitle"></h3>
+                <p class="devlog-excerpt" data-i18n="devlogOneText"></p>
+              </div>
+            </div>
+            <!-- <div class="devlog">
+              <span class="devlog-date">05.10.26</span>
+              <div>
+                <h3 class="devlog-title" data-i18n="devlogOneTitle">Как заставить кубик помнить свои ходы</h3>
+                <p class="devlog-excerpt" data-i18n="devlogOneText">Эксперимент с историей вращений, автоматическим откатом и быстрым возвращением в собранное состояние</p>
+              </div>
+              <a class="devlog-read" href="#notes" data-i18n="readNote">Читать</a>
+            </div>
+            <div class="devlog">
+              <span class="devlog-date">28.09.26</span>
+              <div>
+                <h3 class="devlog-title" data-i18n="devlogTwoTitle">Почему маленькие игры сложнее больших</h3>
+                <p class="devlog-excerpt" data-i18n="devlogTwoText">О том, как одна механика превращается в десятки решений — и почему я всё равно люблю этот формат</p>
+              </div>
+              <a class="devlog-read" href="#notes" data-i18n="readNote">Читать</a>
+            </div>
+            <div class="devlog">
+              <span class="devlog-date">14.09.26</span>
+              <div>
+                <h3 class="devlog-title" data-i18n="devlogThreeTitle">Ночной бар как игровая система</h3>
+                <p class="devlog-excerpt" data-i18n="devlogThreeText">Как персонажи, случайные события и пространство складываются в одну живую сцену для Midnight Shift</p>
+              </div>
+              <a class="devlog-read" href="#notes" data-i18n="readNote">Читать</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="contactTitle">Контакты</h2>
+            <p class="section-kicker">04 / 04</p>
+          </div>
+          <div class="contacts">
+            <div class="contact-list">
+              <a class="contact" href="https://t.me/udopd" target="_blank" rel="noreferrer">
+                <span class="contact-label">Telegram</span><span class="contact-value">@udopd</span>
+              </a>
+              <a class="contact" href="https://github.com/udopd" target="_blank" rel="noreferrer">
+                <span class="contact-label">GitHub</span><span class="contact-value">github.com/udopd</span>
+              </a>
+              <a class="contact" href="https://udopd.itch.io/" target="_blank" rel="noreferrer">
+                <span class="contact-label">itch.io</span><span class="contact-value">udopd.itch.io</span>
+              </a>
+              <a class="contact" href="mailto:udopd.games@gmail.com">
+                <span class="contact-label">Email</span><span class="contact-value">udopd.games@gmail.com</span>
+              </a>
+              <a class="contact" href="https://www.youtube.com/@udopd">
+                <span class="contact-label">YouTube</span><span class="contact-value">Super Cube</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <p class="footer-brand">SUPER CUBE</p>
+        <p class="footer-note">
+          <span class="footer-line language-scramble" data-i18n="footerOne">Один человек</span>
+          <span class="footer-line language-scramble" data-i18n="footerTwo">Маленькие игры</span>
+          <span class="footer-line language-scramble" data-i18n="footerThree">Большие идеи</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
