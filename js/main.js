@@ -1,10 +1,10 @@
 const translations = {
     ru: {
         navAbout: 'О студии', navProjects: 'Проекты', navDevlogs: 'Заметки', navContact: 'Контакты',
-        quote: 'Я просто делаю маленькие игры',
+        quote: 'Я просто делаю игры',
         heroPerson: 'Павел Удовкин · Solo Developer',
         solveCube: 'Собрать кубик',
-        aboutTitle: 'О студии', aboutLead: '<span class="about-brand">SUPER CUBE</span> — маленькая студия одного человека, где идеи превращаются в небольшие игры',
+        aboutTitle: 'О студии', aboutLead: '<span class="about-brand">SUPER CUBE</span> — маленькая студия из одного человека, где идеи превращаются в небольшие игры',
         aboutCopy: 'Без большой команды и лишнего шума. Я проектирую, программирую, собираю и выпускаю свои игры сам — от первой механики до последнего пикселя',
         factStudio: 'Студия', factFounder: 'Создатель', factFormat: 'Формат', factFormatValue: 'Solo game development',
         
@@ -16,14 +16,14 @@ const translations = {
         moreProjects: 'Показать больше', moreProjectsHide: 'Скрыть',
         
         devlogsTitle: 'Заметки', readNote: 'Читать', notesUnderDevelopment: 'В разработке',
-        devlogOneTitle: 'Этот раздел в разработке', devlogOneText: 'Этот раздел будет сождержать статьи, посты, записи. Также будет отдельная страница с девлогом',
+        devlogOneTitle: 'Этот раздел в разработке', devlogOneText: 'Этот раздел будет содержать статьи, посты, записи. Также будет отдельная страница с девлогом',
         devlogTwoTitle: 'Почему маленькие игры сложнее больших', devlogTwoText: 'О том, как одна механика превращается в десятки решений — и почему я всё равно люблю этот формат',
         devlogThreeTitle: 'Ночной бар как игровая система', devlogThreeText: 'Как персонажи, случайные события и пространство складываются в одну живую сцену для Midnight Shift',
         contactTitle: 'Контакты', footerOne: 'Один человек', footerTwo: 'Маленькие игры', footerThree: 'Большие идеи'
     },
     en: {
         navAbout: 'About', navProjects: 'Projects', navDevlogs: 'Devlogs', navContact: 'Contact',
-        quote: 'I just make little games',
+        quote: 'I just make games',
         heroPerson: 'Pavel Udovkin · Solo Developer',
         solveCube: 'Solve cube',
         aboutTitle: 'About', aboutLead: '<span class="about-brand">SUPER CUBE</span> is a one-person studio where ideas turn into small games',
