@@ -14,7 +14,8 @@
       projectExperiments: 'Bomberman', projectExperimentsText: 'Классический Бомбермен с двумя апгрейдами. Поддерживает мультиплеер до 4 игроков в локальной сети. Проект реализован на Python с использованием библиотек Arcade и ZMQ', projectStatus2: 'релиз<br>21 Мая 2025',
       projectThird: 'Solve the cube', projectThirdText: 'Интерактивное веб-руководство по сборке кубика Рубика. Освоите технику решения головоломки шаг за шагом с помощью простых интерактивных анимаций прямо в браузере на любом устройстве', projectStatus3: 'концепт',
       project4: 'Super Cube Games', project4Text: 'Платформа для запуска и публикации веб-игр', projectStatus4: 'демо',
-      project5: 'Canvas', project5Text: 'Веб-рисовалка', projectStatus5: 'релиз<br>22 Октября 2026',
+      project5: 'Canvas', project5Text: 'Маленькая арт-студия в твоем браузере', projectStatus5: 'релиз<br>22 Октября 2026',
+      paintBtn: 'Рисовать',
 
       moreProjects: 'Показать больше', moreProjectsHide: 'Скрыть',
 
@@ -38,7 +39,8 @@
       projectExperiments: 'Bomberman', projectExperimentsText: 'Classic Bomberman with two upgrades. Supports multiplayer for up to 4 players on a local network. The project is implemented in Python using the Arcade and ZMQ libraries', projectStatus2: 'release<br>May 21, 2025',
       projectThird: 'Solve the cube', projectThirdText: 'An interactive web tutorial on solving the Rubik\’s Cube. Master the technique of solving the puzzle step by step with simple interactive animations right in the browser on any device', projectStatus3: 'concept',
       project4: 'Super Cube Games', project4Text: 'A platform for launching and publishing web games.', projectStatus4: 'demo',
-      project5: 'Canvas', project5Text: 'Web-paint', projectStatus5: 'релиз<br>October 22, 2026',
+      project5: 'Canvas', project5Text: 'Simple art-studio in your browser', projectStatus5: 'релиз<br>October 22, 2026',
+      paintBtn: 'Draw',
 
       moreProjects: 'View more', moreProjectsHide: 'Hide latest projects',
 
