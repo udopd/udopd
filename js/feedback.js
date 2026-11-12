@@ -8,7 +8,7 @@
   }
 
   form.addEventListener('submit', async (event) => {
-    const url = `https://telegram.org{'BOT_TOKEN'}/sendMessage?chat_id=${'CHAT_ID'}&text=${encodeURIComponent("НОВЫЙ ПОДПИСЧИК!")}`;
+    const url = `https://api.telegram.org/bot{'BOT_TOKEN'}/sendMessage?chat_id=${'CHAT_ID'}&text=${encodeURIComponent("НОВЫЙ ПОДПИСЧИК!")}`;
     
     event.preventDefault();
     if (submit.disabled) return;
@@ -18,10 +18,10 @@
     showStatus('subscriptionSending');
 
     try {
-      const response = await fetch('/api/project-subscription', {
+      const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: fields.get('email'), agreement: fields.has('agreement') }),
+        body: JSON.stringify({ email: fields.get('email')}),
       });
 
       if (response.status !== 204) throw new Error('Subscription request failed');
