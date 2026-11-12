@@ -8,7 +8,7 @@
   }
 
   form.addEventListener('submit', async (event) => {
-    const url = `https://api.telegram.org/bot{'BOT_TOKEN'}/sendMessage`;
+    const url = `https://api.telegram.org/bot${'BOT_TOKEN'}/sendMessage`;
     
     event.preventDefault();
     if (submit.disabled) return;
@@ -23,7 +23,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           chat_id: 'CHAT_ID',
-          text: 'test',
+          text: 'Новый пользователь!!!',
         }),
       });
 
