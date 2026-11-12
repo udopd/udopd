@@ -31,7 +31,7 @@
       form.reset();
       showStatus('subscriptionSuccess', 'ok');
     } catch {
-      showStatus('subscriptionError', (await response.json()).description);
+      showStatus('subscriptionError', response,status);
     } finally {
       submit.disabled = false;
     }
