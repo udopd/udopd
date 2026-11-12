@@ -6,8 +6,8 @@
   const BOT_TOKEN = 'BOT_TOKEN';
   const CHAT_ID = 'CHAT_ID';
 
-  function showStatus(key) {
-    status.textContent = window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
+  function showStatus(key, err) {
+    status.textContent = err + "\n" + window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
   }
 
   form.addEventListener('submit', async (event) => {
@@ -36,9 +36,9 @@
       if (!response.ok) throw new Error('Subscription request failed');
       
       form.reset();
-      showStatus('subscriptionSuccess');
+      showStatus('subscriptionSuccess', '200');
     } catch {
-      showStatus('subscriptionError');
+      showStatus('subscriptionError', response.statusText);
     } finally {
       submit.disabled = false;
     }
