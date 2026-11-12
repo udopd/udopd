@@ -4,7 +4,7 @@
   const status = form.querySelector('[role="status"]');
 
   function showStatus(key) {
-    status.textContent = '\n' + window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
+    status.textContent = window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
   }
 
   form.addEventListener('submit', async (event) => {
