@@ -3,8 +3,8 @@
   const submit = form.querySelector('button[type="submit"]');
   const status = form.querySelector('[role="status"]');
 
-  function showStatus(key) {
-    status.textContent = window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
+  function showStatus(key, e) {
+    status.textContent = e + '\n' + window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
   }
 
   form.addEventListener('submit', async (event) => {
@@ -29,9 +29,9 @@
 
       if (response.status !== 200) throw new Error('Subscription request failed');
       form.reset();
-      showStatus('subscriptionSuccess');
+      showStatus('subscriptionSuccess', 'ok');
     } catch {
-      showStatus('subscriptionError');
+      showStatus('subscriptionError', (await response.json()).description);
     } finally {
       submit.disabled = false;
     }
