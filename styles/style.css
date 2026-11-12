@@ -38,6 +38,7 @@
 
     html {
       scroll-behavior: smooth;
+      scrollbar-gutter: stable;
     }
 
     body {
@@ -409,11 +410,14 @@
     }
 
     .projects-more {
+      flex-wrap: wrap;
+      gap: 12px;
       display: flex;
       justify-content: center;
       padding-top: 34px;
     }
 
+    .projects-more button,
     .projects-more a {
       display: inline-flex;
       align-items: center;
@@ -427,6 +431,12 @@
       transition: background .2s ease, color .2s ease, transform .2s ease;
     }
 
+    .projects-more button {
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .projects-more button:hover,
     .projects-more a:hover {
       background: var(--accent);
       color: var(--accent-inverse);
@@ -1232,3 +1242,99 @@
     width: 100%;
   }
 }
+
+    html:has(.subscription-dialog[open]) {
+      overflow: hidden;
+    }
+
+    .subscription-dialog {
+      overscroll-behavior: contain;
+      width: min(440px, calc(100% - 32px));
+      max-height: calc(100% - 32px);
+      padding: clamp(16px, 5vw, 28px);
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .subscription-dialog::backdrop {
+      background: rgb(0 0 0 / 40%);
+      backdrop-filter: blur(6px);
+    }
+
+    .subscription-dialog form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .subscription-header,
+    .subscription-agreement {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .subscription-header {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .subscription-header h3,
+    .subscription-status {
+      margin: 0;
+    }
+
+    .subscription-close {
+      display: grid;
+      flex: 0 0 44px;
+      place-items: center;
+      height: 44px;
+      padding: 0;
+      border: 1px solid var(--text);
+      background: transparent;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .subscription-close:hover {
+      background: var(--accent);
+      color: var(--accent-inverse);
+      transform: translateY(-2px);
+    }
+
+    .subscription-close-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .subscription-dialog input[type="email"] {
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 12px;
+      font: inherit;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .subscription-submit {
+      width: 100%;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+
+    .subscription-submit:disabled {
+      opacity: .6;
+      cursor: default;
+      transform: none;
+    }
+
+    .subscription-status:empty {
+      margin-top: -12px;
+    }

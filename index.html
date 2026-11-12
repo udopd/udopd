@@ -184,7 +184,27 @@
           </div>
           <div class="projects-more">
             <a href="#" id="projectsToggle" data-i18n="moreProjects">Посмотреть больше</a>
+            <button type="button" id="openProjectSubscription" aria-haspopup="dialog" data-i18n="subscribeProjects">Подписаться на проекты</button>
           </div>
+          <dialog class="subscription-dialog" id="projectSubscription" aria-labelledby="subscriptionTitle">
+            <form id="tg-form">
+              <div class="subscription-header">
+                <h3 id="subscriptionTitle" data-i18n="subscribeProjects">Подписаться на проекты</h3>
+                <button class="subscription-close" type="button">
+                  <span aria-hidden="true">×</span>
+                  <span class="subscription-close-label" data-i18n="subscriptionClose">Закрыть</span>
+                </button>
+              </div>
+              <label for="subscriptionEmail" data-i18n="subscriptionEmail">Почта</label>
+              <input id="subscriptionEmail" name="email" type="email" autocomplete="email" maxlength="254" required autofocus>
+              <label class="subscription-agreement">
+                <input name="agreement" type="checkbox" required>
+                <span data-i18n="subscriptionAgreement">Я принимаю пользовательские соглашения</span>
+              </label>
+              <button class="project-play subscription-submit" type="submit" data-i18n="subscriptionSubmit">Подписаться</button>
+              <p class="subscription-status" role="status"></p>
+            </form>
+          </dialog>
         </div>
       </section>
 
@@ -274,5 +294,6 @@
   <script src="./js/common.js" defer></script>
   <script src="./js/rubik.js" defer></script>
   <script src="./js/page.js" defer></script>
+  <script src="./js/feedback.js" defer></script>
 </body>
 </html>

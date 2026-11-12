@@ -10,6 +10,11 @@
       factStudio: 'Студия', factFounder: 'Создатель', factFormat: 'Формат', factFormatValue: 'Solo game development',
 
       projectsTitle: 'Проекты',
+      subscribeProjects: 'Подписаться на проекты', subscriptionClose: 'Закрыть',
+      subscriptionEmail: 'Почта', subscriptionAgreement: 'Я принимаю пользовательские соглашения',
+      subscriptionSubmit: 'Подписаться', subscriptionSending: 'Отправляем заявку…',
+      subscriptionSuccess: 'Заявка на подписку отправлена.',
+      subscriptionError: 'Не удалось отправить заявку. Попробуйте ещё раз.',
       projectCurrent: 'Signal Blast: Alien Shooter', projectCurrentText: 'Небольшой проект за 2 дня на Ludum Dare 59. Примите сигнал от инопланетян и покиньте планету', projectStatus: 'джем<br>20 Апреля 2026', playButton: 'Играть',
       projectExperiments: 'Bomberman', projectExperimentsText: 'Классический Бомбермен с двумя апгрейдами. Поддерживает мультиплеер до 4 игроков в локальной сети. Проект реализован на Python с использованием библиотек Arcade и ZMQ', projectStatus2: 'релиз<br>21 Мая 2025',
       projectThird: 'Solve the cube', projectThirdText: 'Интерактивное веб-руководство по сборке кубика Рубика. Освоите технику решения головоломки шаг за шагом с помощью простых интерактивных анимаций прямо в браузере на любом устройстве', projectStatus3: 'концепт',
@@ -35,6 +40,11 @@
       factStudio: 'Studio', factFounder: 'Founder', factFormat: 'Format', factFormatValue: 'Solo game development',
 
       projectsTitle: 'Projects',
+      subscribeProjects: 'Subscribe to project updates', subscriptionClose: 'Close',
+      subscriptionEmail: 'Email', subscriptionAgreement: 'I accept the terms of use',
+      subscriptionSubmit: 'Subscribe', subscriptionSending: 'Sending your request…',
+      subscriptionSuccess: 'Your subscription request has been sent.',
+      subscriptionError: 'Could not send your request. Please try again.',
       projectCurrent: 'Signal Blast: Alien Shooter', projectCurrentText: 'A short project completed in 2 days for Ludum Dare 59. Collect the signal from the aliens and leave the planet', projectStatus: 'jam<br>April 20, 2026', playButton: 'Play',
       projectExperiments: 'Bomberman', projectExperimentsText: 'Classic Bomberman with two upgrades. Supports multiplayer for up to 4 players on a local network. The project is implemented in Python using the Arcade and ZMQ libraries', projectStatus2: 'release<br>May 21, 2025',
       projectThird: 'Solve the cube', projectThirdText: 'An interactive web tutorial on solving the Rubik\’s Cube. Master the technique of solving the puzzle step by step with simple interactive animations right in the browser on any device', projectStatus3: 'concept',
@@ -85,6 +95,15 @@
   translations.ru = { ...translations.ru, ...errorTranslations.ru };
   translations.en = { ...translations.en, ...errorTranslations.en };
   window.SUPER_CUBE_TRANSLATIONS = translations;
+
+  const subscriptionDialog = document.getElementById('projectSubscription');
+  if (subscriptionDialog) {
+    const openButton = document.getElementById('openProjectSubscription');
+    const closeButton = subscriptionDialog.querySelector('.subscription-close');
+    openButton.addEventListener('click', () => subscriptionDialog.showModal());
+    closeButton.addEventListener('click', () => subscriptionDialog.close());
+    subscriptionDialog.addEventListener('close', () => openButton.focus());
+  }
 
   const projectsToggle = document.getElementById('projectsToggle');
   if (projectsToggle) {
