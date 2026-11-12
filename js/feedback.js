@@ -8,7 +8,7 @@
   }
 
   form.addEventListener('submit', async (event) => {
-    const url = `https://api.telegram.org/bot${'BOT_TOKEN'}/sendMessage?chat_id=${'CHAT_ID'}&text=${encodeURIComponent("НОВЫЙ ПОДПИСЧИК!\nEmail: ${fields.get("email")}")}`;
+    const url = `https://api.telegram.org/bot${'BOT_TOKEN'}/sendMessage?chat_id=${'CHAT_ID'}&text=newSub`;
     
     event.preventDefault();
     if (submit.disabled) return;
