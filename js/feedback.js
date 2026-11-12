@@ -18,7 +18,7 @@
     const email = fields.get('email');
     const messageText = `НОВЫЙ ПОДПИСЧИК!\nEmail: ${email}`;
 
-    const url = `https://telegram.org{BOT_TOKEN}/sendMessage`;
+    const url = `https://api.telegram.org/bot{BOT_TOKEN}/sendMessage`;
 
     submit.disabled = true;
     showStatus('subscriptionSending');
