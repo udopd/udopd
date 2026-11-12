@@ -186,6 +186,7 @@
             <a href="#" id="projectsToggle" data-i18n="moreProjects">Посмотреть больше</a>
             <button type="button" id="openProjectSubscription" aria-haspopup="dialog" data-i18n="subscribeProjects">Подписаться на проекты</button>
           </div>
+          
           <dialog class="subscription-dialog" id="projectSubscription" aria-labelledby="subscriptionTitle">
             <form id="tg-form">
               <div class="subscription-header">
@@ -199,7 +200,7 @@
               <input id="subscriptionEmail" name="email" type="email" autocomplete="email" maxlength="254" required autofocus>
               <label class="subscription-agreement">
                 <input name="agreement" type="checkbox" required>
-                <span data-i18n="subscriptionAgreement">Я принимаю пользовательские соглашения</span>
+                <span data-i18n="subscriptionAgreement">Я соглашаюсь на рассылку информационных сообщений</span>
               </label>
               <button class="project-play subscription-submit" type="submit" data-i18n="subscriptionSubmit">Подписаться</button>
               <p class="subscription-status" role="status"></p>
