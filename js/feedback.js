@@ -3,23 +3,17 @@
   const submit = form.querySelector('button[type="submit"]');
   const status = form.querySelector('[role="status"]');
 
-  const BOT_TOKEN = 'BOT_TOKEN';
-  const CHAT_ID = 'CHAT_ID';
-
-  function showStatus(key, err) {
-    status.textContent = err + "\n" + window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
+  function showStatus(key) {
+    status.textContent = window.SUPER_CUBE_TRANSLATIONS[document.documentElement.lang][key];
   }
 
   form.addEventListener('submit', async (event) => {
+    const url = `https://api.telegram.org/bot{'BOT_TOKEN'}/sendMessage`;
+    
     event.preventDefault();
     if (submit.disabled) return;
 
     const fields = new FormData(form);
-    const email = fields.get('email');
-    const messageText = `НОВЫЙ ПОДПИСЧИК!\nEmail: ${email}`;
-
-    const url = `https://api.telegram.org/bot{BOT_TOKEN}/sendMessage`;
-
     submit.disabled = true;
     showStatus('subscriptionSending');
 
@@ -28,17 +22,16 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: messageText,
+          chat_id: 'CHAT_ID',
+          text: 'test',
         }),
       });
 
-      if (!response.ok) throw new Error('Subscription request failed');
-      
+      if (response.status !== 200) throw new Error('Subscription request failed');
       form.reset();
-      showStatus('subscriptionSuccess', '200');
+      showStatus('subscriptionSuccess');
     } catch {
-      showStatus('subscriptionError', response.statusText);
+      showStatus('subscriptionError');
     } finally {
       submit.disabled = false;
     }
