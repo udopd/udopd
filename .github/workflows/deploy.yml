@@ -20,8 +20,8 @@ jobs:
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
-          sed -i "s|BOT_TOKEN|$BOT_TOKEN|g" feedback.js
-          sed -i "s|CHAT_ID|$CHAT_ID|g" feedback.js 
+          sed -i "s|BOT_TOKEN|$BOT_TOKEN|g" js/feedback.js
+          sed -i "s|CHAT_ID|$CHAT_ID|g" js/feedback.js 
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
