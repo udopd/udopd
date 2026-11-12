@@ -11,7 +11,7 @@
 
       projectsTitle: 'Проекты',
       subscribeProjects: 'Подписаться на проекты', subscriptionClose: 'Закрыть',
-      subscriptionEmail: 'Почта', subscriptionAgreement: 'Я принимаю пользовательские соглашения',
+      subscriptionEmail: 'Почта', subscriptionAgreement: 'Я соглашаюсь на информационную рассылку',
       subscriptionSubmit: 'Подписаться', subscriptionSending: 'Отправляем заявку…',
       subscriptionSuccess: 'Заявка на подписку отправлена.',
       subscriptionError: 'Не удалось отправить заявку. Попробуйте ещё раз.',
@@ -41,7 +41,7 @@
 
       projectsTitle: 'Projects',
       subscribeProjects: 'Subscribe to project updates', subscriptionClose: 'Close',
-      subscriptionEmail: 'Email', subscriptionAgreement: 'I accept the terms of use',
+      subscriptionEmail: 'Email', subscriptionAgreement: 'I agree to receive the newsletter',
       subscriptionSubmit: 'Subscribe', subscriptionSending: 'Sending your request…',
       subscriptionSuccess: 'Your subscription request has been sent.',
       subscriptionError: 'Could not send your request. Please try again.',
