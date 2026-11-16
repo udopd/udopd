@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: udopd:latest
+    container_name: udopd
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
