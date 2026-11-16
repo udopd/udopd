@@ -1,5 +1,9 @@
 (() => {
-  const form = document.getElementById('tg-form');
+  emailjs.init({
+    publicKey: "JtoiCVCuAWGfCSUoF",
+  });
+
+  const form = document.getElementById('sub-form');
   const submit = form.querySelector('button[type="submit"]');
   const status = form.querySelector('[role="status"]');
 
@@ -8,32 +12,34 @@
   }
 
   form.addEventListener('submit', async (event) => {
-    const url = `https://api.telegram.org/bot${'BOT_TOKEN'}/sendMessage`;
-    
     event.preventDefault();
-    if (submit.disabled) return;
 
-    const fields = new FormData(form);
-    submit.disabled = true;
-    showStatus('subscriptionSending');
+    if (submit && submit.disabled) return;
+    if (submit) submit.disabled = true;
+
+    if (typeof showStatus === 'function') {
+      showStatus('subscriptionSending');
+    }
+
+    const emailInput = form.querySelector('input[type="email"]');
+    const templateParams = {
+      email: emailInput.value.trim(),
+    };
 
     try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: 'CHAT_ID',
-          text: 'Новый пользователь!!!',
-        }),
-      });
+      const response1 = await emailjs.send('super-cube-emailjs', 'super-cube-new-sub', templateParams);
+      const response2 = await emailjs.send('super-cube-emailjs', 'super-cube-for-sub', templateParams);
 
-      if (response.status !== 200) throw new Error('Subscription request failed');
+      if (response1.status !== 200 && response2.status !== 200) {
+        throw new Error('Subscription request failed');
+      }
+
       form.reset();
       showStatus('subscriptionSuccess');
-    } catch {
+    } catch (error) {
       showStatus('subscriptionError');
     } finally {
-      submit.disabled = false;
+      if (submit) submit.disabled = false;
     }
   });
 })();
